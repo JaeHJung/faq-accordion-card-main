@@ -40,7 +40,7 @@ div input:checked + label {
 .container {
 	position: relative;
 	background-color: white;
-	max-width: 22rem;
+	max-width: 19rem;
 	border-radius: 1rem;
 	padding: 1.5rem;
 }

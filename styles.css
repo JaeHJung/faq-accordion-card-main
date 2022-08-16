@@ -5,6 +5,7 @@
 	padding: 0;
 	line-height: 1;
 	box-sizing: border-box;
+	outline: 1px solid red;
 }
 
 body {
@@ -38,16 +39,25 @@ div input:checked + label {
 }
 
 .container {
+	display: flex;
 	position: relative;
 	background-color: white;
-	max-width: 19rem;
+	max-width: 45rem;
 	border-radius: 1rem;
 	padding: 1.5rem;
+	margin: auto;
 }
 
-.card {
+.faq {
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.image {
 	position: relative;
-	width: 100%;
+	max-width: 50%;
 }
 
 .illustration-mobile {
@@ -89,13 +99,44 @@ div input:checked + label {
 	width: 90%;
 }
 
+.illustration-desktop {
+	left: -20%;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.bg-desktop {
+	left: -85%;
+	top: -50%;
+	position: absolute;
+	display: inline-block;
+	width: 35rem;
+}
+.illustration-mobile {
+	display: none;
+}
+
+.bg-mobile {
+	display: none;
+}
+
 @media (max-width: 36em) {
 	body {
 		padding: 10rem 0rem 4rem 0rem;
 	}
 
+	.faq {
+		max-width: 100%;
+	}
+
+	.image {
+		max-width: 100%;
+	}
+
 	.container {
 		padding-top: 8rem;
+		max-width: 19rem;
 	}
 	.illustration-desktop {
 		display: none;
@@ -108,15 +149,13 @@ div input:checked + label {
 	.bg-mobile {
 		display: block;
 		position: absolute;
-		left: 50%;
-		transform: translate(-50%, -120%);
+		top: -40%;
 	}
 
 	.illustration-mobile {
 		display: block;
 		position: absolute;
 		height: 11rem;
-		left: 50%;
-		transform: translate(-50%, -135%);
+		top: -70%;
 	}
 }
